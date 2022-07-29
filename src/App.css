@@ -1,0 +1,17 @@
+body {
+  background-image: url("./images/background3.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1000px;
+  color: #00235E;
+  /* font-size: 1.2rem; */
+}
+.blueBtn {
+  background-color: #618abb;
+  color: #fff;
+  border: none;
+  padding: 10px 30px;
+  font-size: 18px;
+  border-radius: 35px;
+}
