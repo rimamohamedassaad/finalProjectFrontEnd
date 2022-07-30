@@ -9,7 +9,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-
 }
 .blueBtn {
   background-color: #618abb;
@@ -33,6 +32,7 @@ span {
 .App {
   margin-top: 0;
   padding-top: 0;
+ 
 }
 .aquwaCard {
   background: rgba(185, 209, 234, 0.19);
@@ -44,7 +44,7 @@ span {
 .aquwaCard h1 {
   text-align: center;
 }
-.input {
+.input ,textarea{
   background: #ffffff;
   border-radius: 52px;
   border: none;
@@ -52,6 +52,7 @@ span {
   margin: auto;
   padding: 10px;
 }
+
 .btnContainer {
   margin-top: 20px;
   text-align: center;

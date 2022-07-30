@@ -1,0 +1,29 @@
+.contactContainer {
+  /* display: flex; */
+  /* padding-bottom: 150px; */
+}
+.aquwaCardContact {
+  background: rgba(185, 209, 234, 0.19);
+  border-radius: 52px;
+  width: 50%;
+  margin: auto;
+  padding: 40px;
+  /* margin-bottom: 150px; */
+}
+.contactInfo{
+     padding-bottom: 150px;
+}
+@media screen and (max-width: 664px) {
+  .aquwaCardContact {
+    width: 60%;
+  }
+  .contactInfo{
+    padding-bottom: 0;
+}
+}
+@media screen and (max-width: 1170px) {
+    .contactInfo{
+        padding-bottom: 50px;
+   }
+  }
+  
