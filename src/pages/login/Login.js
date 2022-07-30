@@ -25,7 +25,7 @@ function Login() {
         <button className='yellowBtn'>Login</button>
        </div>
        <div className='btnContainer'>
-        <p>Don't you have accoount <sapn><a href="#jdjjd"> register</a></sapn></p>
+        <p>Don't you have accoount ?<sapn><a href="#jdjjd"> register</a></sapn></p>
        </div>
       </div>
     </div>
