@@ -1,0 +1,64 @@
+.reportCard {
+  width: 80%;
+  margin: auto;
+  background: rgba(255,255,255,0.6);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 55px;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+.reportssectionContainer{
+position: relative;
+overflow-y: hidden;
+}
+.firstLine {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.firstLine1 {
+  display: flex;
+  justify-content: flex-start;
+}
+.firstLine div,
+.firstLine1 div {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.boldone {
+  width: 130px;
+}
+.reporth1 {
+  padding-left: 7rem;
+}
+
+.empty {
+  width: 45px;
+}
+.btnLine {
+  display: flex;
+  justify-content: flex-end;
+}
+.circle{
+    border-radius: 50%;
+    background-color: #618abb;
+    width:200px;
+    height: 200px;
+    position: absolute;
+    left: -30px;
+    bottom: -40px;
+}
+@media screen and (max-width: 912px) {
+    .reporth1 {
+      padding-left: 3rem;
+    }
+}
+@media (max-width: 664px) {
+  .firstLine {
+    display: block;
+  }
+  .btnLine {
+    justify-content: flex-start;
+  }
+}

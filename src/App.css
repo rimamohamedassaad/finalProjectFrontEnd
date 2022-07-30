@@ -1,11 +1,16 @@
 body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
   background-image: url("./images/background3.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 1000px;
+  /* height: 1000px; */
   color: #00235E;
   /* font-size: 1.2rem; */
+  /* position: relative; */
+  /* overflow: hidden; */
 }
 .blueBtn {
   background-color: #618abb;
@@ -14,4 +19,15 @@ body {
   padding: 10px 30px;
   font-size: 18px;
   border-radius: 35px;
+}
+.yellowBtn {
+  background-color: #FDBA21;
+  color: #fff;
+  border: none;
+  padding: 10px 30px;
+  font-size: 18px;
+  border-radius: 35px;
+}
+span{
+  color: #FDBA21;
 }

@@ -1,0 +1,94 @@
+.servicesContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.servicesH1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+.serviseCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  padding: 20px;
+  width: 250px;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 35px;
+  /* background-image: url("../../images/sittingbackground.png"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.servisecCardContainer {
+  margin: auto;
+}
+.servisecCardContainer1 {
+  display: flex;
+  justify-content: flex-end;
+  width: 90%;
+  gap:70px;
+  /* flex-wrap: wrap; */
+}
+.services2{
+    margin-top: -80px;
+    margin-right: 20px;
+}
+.services3{
+    margin-top: 40px;
+}
+.serviceCardTitle{
+    font-size: 20px;
+    font-weight: 600;
+}
+@media (min-width: 1400px) { 
+    .services2{
+        margin-top: 0px;
+    }
+    .services3{
+        margin-top: 0px;
+    }
+}
+.servicesBtnContainer{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 150px;
+}
+@media (max-width: 1130px) {
+    .services2{
+        margin-top: 0;
+        margin-right: 0px;
+    }
+    /* .services3{
+        margin-top: 0px;
+    } */
+}
+@media (max-width: 924px) { 
+    .servisecCardContainer1{
+        margin: auto;
+    }
+}
+@media (max-width: 750px) { 
+    .servisecCardContainer1 {
+        /* display: flex;
+        justify-content: flex-end;
+        width: 90%;
+        gap:70px; */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+
+      }
+}
+
+@media (max-width: 664px) {
+    .services2{
+        margin-top: 10px;
+    }
+    .services3{
+        margin-top: 10px;
+    }
+ }
+
+
