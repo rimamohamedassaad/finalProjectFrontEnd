@@ -2,15 +2,7 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  background-image: url("./images/background3.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* height: 1000px; */
-  color: #00235E;
-  /* font-size: 1.2rem; */
-  /* position: relative; */
-  /* overflow: hidden; */
+  color: #00235e;
 }
 .blueBtn {
   background-color: #618abb;
@@ -21,13 +13,49 @@ body {
   border-radius: 35px;
 }
 .yellowBtn {
-  background-color: #FDBA21;
+  background-color: #fdba21;
   color: #fff;
   border: none;
   padding: 10px 30px;
   font-size: 18px;
   border-radius: 35px;
 }
-span{
-  color: #FDBA21;
+span {
+  color: #fdba21;
+}
+.App {
+  margin-top: 0;
+  padding-top: 0;
+}
+.aquwaCard {
+  background: rgba(185, 209, 234, 0.19);
+  border-radius: 52px;
+  width: 35%;
+  margin: auto;
+  padding: 40px;
+}
+.aquwaCard h1 {
+  text-align: center;
+}
+.input {
+  background: #ffffff;
+  border-radius: 52px;
+  border: none;
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+}
+.btnContainer {
+  margin-top: 20px;
+  text-align: center;
+}
+@media screen and (max-width: 921px) {
+  .aquwaCard {
+    width: 70%;
+  }
+}
+@media screen and (min-height: 664px) {
+  .aquwaCard {
+    width: 70%;
+  }
 }

@@ -1,0 +1,14 @@
+.loginContainer{
+    background-image: url("../../images/loginimage.png");
+    margin-top: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding-bottom: 150px;
+ }
+ @media screen and (max-width: 924px) {
+    .loginContainer{
+        background-image: url("../../images/background3.png");
+     }
+  }
