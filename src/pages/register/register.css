@@ -7,6 +7,9 @@
     height: 100vh;
     padding-bottom: 150px;
  }
+ .login{
+    background-image: url("../../images//loginimage2.png");
+ }
  @media screen and (max-width: 924px) {
     .loginContainer{
         background-image: url("../../images/background3.png");
