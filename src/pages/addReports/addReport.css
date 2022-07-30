@@ -1,0 +1,17 @@
+.line1{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.oneinline1{
+    width: 50%;
+}
+@media screen and (max-width: 921px) {
+    .line1{
+        display: block;
+    }
+    .oneinline1{
+        width: 100%;
+    }
+  }

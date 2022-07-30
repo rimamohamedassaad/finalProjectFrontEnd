@@ -1,6 +1,7 @@
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Aboutus from './pages/Aboutus/Aboutus';
+import AddReport from './pages/addReports/AddReport';
 import Contactus from './pages/contactus/Contactus';
 import Home from './pages/Home/Home';
 import Login from './pages/login/Login';
@@ -14,7 +15,8 @@ function App() {
       {/* <Register/> */}
       {/* <Login /> */}
       {/* <Aboutus/> */}
-      <Contactus/>
+      {/* <Contactus/> */}
+      <AddReport/>
     </div>
   );
 }
