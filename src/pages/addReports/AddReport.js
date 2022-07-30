@@ -1,5 +1,6 @@
 import React from 'react'
 import './addReport.css'
+import running from '../../images/theif.png'
 export default function AddReport() {
     return (
         <div className='addReportContainer'>
@@ -11,14 +12,14 @@ export default function AddReport() {
                     <div className='line1'>
                         <div className='oneinline1'>
                             <p>
-                                category :
+                                client name :
                             </p>
                             <input className='input' />
                         </div>
                         <div className='oneinline1'>  <p>
-                            color :
+                            Report date :
                         </p>
-                            <input className='input' />
+                            <input className='input' type='date' />
                         </div>
                     </div>
                     <div className='line1'>
@@ -37,12 +38,12 @@ export default function AddReport() {
                     <div className='line1'>
                         <div className='oneinline1'>
                             <p>
-                                category :
+                                brand :
                             </p>
                             <input className='input' />
                         </div>
                         <div className='oneinline1'>  <p>
-                            color :
+                            line Type :
                         </p>
                             <input className='input' />
                         </div>
@@ -50,12 +51,12 @@ export default function AddReport() {
                     <div className='line1'>
                         <div className='oneinline1'>
                             <p>
-                                category :
+                                client phone number :
                             </p>
                             <input className='input' />
                         </div>
                         <div className='oneinline1'>  <p>
-                            color :
+                            stolen phone number :
                         </p>
                             <input className='input' />
                         </div>
@@ -63,20 +64,30 @@ export default function AddReport() {
                     <div className='line1'>
                         <div className='oneinline1'>
                             <p>
-                                category :
+                                mahdar image :
                             </p>
-                            <input className='input' />
+                            <input className='input' type="file" hidden id="addmahdar" />
+                            <label for='addmahdar'> <p className='input addmahdar'></p> </label>
                         </div>
-                        <div className='oneinline1'>  <p>
-                            color :
-                        </p>
-                            <input className='input' />
-                        </div>
-                    </div>
                     
+                    </div>
+                    <div className='line1'>
+                    <div className='oneinline1'>
+                            <p>
+                                phone images :
+                            </p>
+                            <input className='input' type="file" hidden id="addmahdar" />
+                            <label for='addmahdar'> <p className='input addmahdar'></p> </label>
+                        </div>
+                    
+                      
+                    </div>
+
                     <div className='btnContainer'>
                         <button className='yellowBtn'>register</button>
                     </div>
+                    <div className='yellowCircle'></div>
+                    <img className='theifImage' src={running} alt="running"/>
                 </div>
             </div>
         </div>
