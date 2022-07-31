@@ -1,9 +1,10 @@
 import React from 'react'
 import './contact.css'
-import atle from '../../images/atlee.png'
+import Navbar from '../../components/Navbar/Navbar'
 function Contactus() {
     return (
         <div>
+            <Navbar/>
             <div className='contactContainer'>
                 <div className='contactInfo'>
                     <div className='aquwaCardContact'>

@@ -1,9 +1,11 @@
 import React from 'react'
 import './addReport.css'
 import running from '../../images/theif.png'
+import Navbar from '../../components/Navbar/Navbar'
 export default function AddReport() {
     return (
         <div className='addReportContainer'>
+            <Navbar/>
             <div>
                 <div className='aquwaCardContact'>
                     <h1>

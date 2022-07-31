@@ -1,8 +1,10 @@
 import React from 'react'
+import Navbar from '../../components/Navbar/Navbar'
 import stolen from '../../images/stolen.png'
 function Aboutus() {
   return (
     <div>
+      <Navbar/>
       <div className='aboutContainer'>
         <div className='aboutInfo'>
           <p className='abouth1'>About us</p>
