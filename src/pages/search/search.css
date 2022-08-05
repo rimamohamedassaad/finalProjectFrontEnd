@@ -1,0 +1,22 @@
+.dropDownList {
+  color: #fff;
+  background-color: #b9d1ea;
+  padding: 10px;
+  width: 150px;
+  border: 1px solid #fff;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 18px;
+}
+.filteringContainer {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap:30px;
+  margin-bottom: 50px;
+}
+.searchcardContainer{
+    padding-bottom: 50px;
+}

@@ -8,6 +8,9 @@ import Login from './pages/login/Login';
 import Register from './pages/register/Register';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ProtectedRoutes from './components/ProtectedRoutes';
+import Search from './pages/search/Search';
+import Profile from './pages/profile /Profile';
+import OneCard from './pages/OneCard/OneCard';
 
 function App() {
   return (
@@ -22,7 +25,10 @@ function App() {
           <Route path="/add-report" exact element={<AddReport />} />
           <Route element={<ProtectedRoutes />}>
             {/* <Route path="/profile" exact element={<Profile />} /> */}
-            </Route>
+          </Route>
+          <Route path="/search" exact element={< Search/>} />
+          <Route path="/profile" exact element={< Profile/>} />
+          <Route path="/oncard" exact element={< OneCard/>} />
         </Routes>
       </BrowserRouter>
       {/* <AllReports /> */}

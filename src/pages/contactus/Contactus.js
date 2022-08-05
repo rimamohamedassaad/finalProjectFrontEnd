@@ -4,7 +4,7 @@ import Navbar from '../../components/Navbar/Navbar'
 function Contactus() {
     return (
         <div>
-            <Navbar/>
+            <Navbar />
             <div className='contactContainer'>
                 <div className='contactInfo'>
                     <div className='aquwaCardContact'>
@@ -31,7 +31,9 @@ function Contactus() {
                         <img src={atle} alt="atle" />
                     </div> */}
                     </div>
-
+                    {/* <div className='buleCircleC'>
+                    </div>
+                    <div className='yellowCircleC'></div> */}
                 </div>
             </div>
         </div>

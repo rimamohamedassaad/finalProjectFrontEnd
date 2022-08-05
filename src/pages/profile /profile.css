@@ -1,0 +1,13 @@
+.personalInfoCard{
+    display: flex;
+    /* justify-content: space-between; */
+}
+.personalInfoCard p{
+    width: 150px;
+}
+.personalInfoCard input{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: #00235e;
+}

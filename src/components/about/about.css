@@ -1,6 +1,7 @@
 .aboutContainer {
   display: flex;
   flex-wrap: wrap;
+  height: 100vh;
 }
 .aboutInfo {
   display: flex;
@@ -17,7 +18,7 @@
 }
 .aboutImage img {
   width: 100%;
-  height: 100%;
+  height: 40rem;
 }
 
 .abouth1 {
@@ -52,5 +53,8 @@
   }
   .aboutImage {
     display: none;
+  }
+  .aboutContainer{
+    display: block;
   }
 }

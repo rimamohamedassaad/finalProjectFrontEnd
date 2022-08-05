@@ -1,6 +1,7 @@
 .contactContainer {
   /* display: flex; */
   /* padding-bottom: 150px; */
+  height: 100vh;
 }
 .aquwaCardContact {
   background: rgba(185, 209, 234, 0.19);
@@ -10,9 +11,15 @@
   padding: 40px;
   margin-bottom: 150px;
   position: relative;
+  
 }
 .contactInfo{
      padding-bottom: 150px;
+}
+.buleCircleC{
+  width: 100px;
+  height: 100px;
+  background-color: '##fdba21';
 }
 @media screen and (max-width: 664px) {
   .aquwaCardContact {
