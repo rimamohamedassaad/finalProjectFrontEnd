@@ -5,7 +5,6 @@ import Login from "../pages/login/Login";
 
 const ProtectedRoutes = () => {
   let { auth } = useAuth();
-
   if (auth) return <Outlet />;
   else return <Login />; //if not authenticated
 };

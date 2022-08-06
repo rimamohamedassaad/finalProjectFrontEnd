@@ -84,6 +84,40 @@ function Search() {
                         color
                     </option>
                 </select>
+                <select className='dropDownList'>
+                    <option>
+                        color
+                    </option>
+                    <option>
+                        color
+                    </option>
+                    <option>
+                        color
+                    </option>
+                </select>
+                <select className='dropDownList'>
+                    <option>
+                        color
+                    </option>
+                    <option>
+                        color
+                    </option>
+                    <option>
+                        color
+                    </option>
+                </select>
+                <select className='dropDownList'>
+                    <option>
+                        color
+                    </option>
+                    <option>
+                        color
+                    </option>
+                    <option>
+                        color
+                    </option>
+                </select>
+                
             </div>
             <div className='searchcardContainer'>
                 <ReportCard />

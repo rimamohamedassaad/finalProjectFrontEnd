@@ -51,11 +51,14 @@ nav .btn {
 }
 
 nav .active {
-  background-color: #3940d8;
+
 }
 nav a {
   padding: 15px;
 }
+/* .active {
+  background-color: transparent;
+} */
 @media screen and (max-width: 921px) {
   .navrightContainer,
   .navrightContainerloggedin {

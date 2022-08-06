@@ -22,13 +22,14 @@ function App() {
           <Route path="/login" exact element={<Login />} />
           <Route path="/about" exact element={<Aboutus />} />
           <Route path="/contact" exact element={<Contactus />} />
-          <Route path="/add-report" exact element={<AddReport />} />
           <Route element={<ProtectedRoutes />}>
-            {/* <Route path="/profile" exact element={<Profile />} /> */}
+            <Route path="/profile" exact element={<Profile />} />
+            <Route path="/add-report" exact element={<AddReport />} />
+            <Route path="/search" exact element={< Search />} />
+            <Route path="/oncard" exact element={< OneCard />} />
           </Route>
-          <Route path="/search" exact element={< Search/>} />
-          <Route path="/profile" exact element={< Profile/>} />
-          <Route path="/oncard" exact element={< OneCard/>} />
+          {/* <Route path="/profile" exact element={< Profile/>} /> */}
+
         </Routes>
       </BrowserRouter>
       {/* <AllReports /> */}

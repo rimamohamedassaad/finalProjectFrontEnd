@@ -34,11 +34,12 @@ span {
   padding-top: 0;
 }
 .aquwaCard {
-  background: rgba(185, 209, 234, 0.19);
+  background: rgba(185, 209, 234);
   border-radius: 52px;
   width: 35%;
   margin: auto;
   padding: 40px;
+  
 }
 .aquwaCard h1 {
   text-align: center;

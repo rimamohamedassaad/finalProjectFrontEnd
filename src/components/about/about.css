@@ -16,9 +16,13 @@
 .aboutImage {
   width: 50%;
 }
+.about img{
+  width: 40rem;
+}
+
 .aboutImage img {
   width: 100%;
-  height: 40rem;
+  /* height: 100%; */
 }
 
 .abouth1 {

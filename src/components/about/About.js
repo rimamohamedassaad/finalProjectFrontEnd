@@ -10,7 +10,7 @@ function About() {
                 <p>Lorem Ipsum is simply dummy text of the printing and typ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's k</p>
                 <p><button className='yellowBtn'>About us</button></p>
             </div>
-            <div className='aboutImage'>
+            <div className='aboutImage about'>
                 <img src={aboutImage} alt="about" />
             </div>
         </div>

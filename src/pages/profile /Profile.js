@@ -2,7 +2,15 @@ import React from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import ReportCard from '../../components/reports/ReportCard'
 import './profile.css'
+import { useNavigate } from "react-router-dom";
+
 function Profile() {
+    const navigate = useNavigate();
+    const logout = () => {
+        localStorage.clear();
+        navigate("/login");
+        window.location.reload("");
+    }
     return (
         <div>
             <Navbar />
@@ -34,13 +42,15 @@ function Profile() {
                     </p>
                     <input className='inputProfile' type="text" placeholder='enter you user name'
                         required /></div>
-
+                <div>
+                    <button className='blueBtn' onClick={logout}>logout</button>
+                </div>
             </div>
             <div>
                 <p className='abouth1 servicesH1 reporth1'> your  <span> Events</span></p>I
-                <ReportCard/>
-                <ReportCard/>
-                <ReportCard/>
+                <ReportCard />
+                <ReportCard />
+                <ReportCard />
             </div>
 
         </div>
