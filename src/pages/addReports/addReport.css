@@ -11,6 +11,16 @@
   justify-content: space-between;
   flex-wrap: wrap;
 }
+.plus {
+  position: absolute;
+  top: 53px;
+  width: 30px;
+  height: 30px;
+  left:43%;
+}
+.lineimage{
+  position: relative;
+}
 .oneinline1 {
   width: 50%;
 }
@@ -45,5 +55,8 @@
   }
   .oneinline1 {
     width: 100%;
+  }
+  .plus{
+    top:37px
   }
 }

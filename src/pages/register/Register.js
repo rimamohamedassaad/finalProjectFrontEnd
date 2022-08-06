@@ -61,7 +61,11 @@ function Register() {
           <p>
             password :
           </p>
-          <input className='input' type='password' value={password} placeholder='enter your password'aquwa required />
+          <input className='input' type='password' value={password} placeholder='enter your password' required
+            onChange={(e) => {
+              setPassword(e.target.value)
+            }}
+          />
           <p>
             comfirm password :
           </p>

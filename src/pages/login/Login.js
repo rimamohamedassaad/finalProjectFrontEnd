@@ -3,7 +3,7 @@ import Navbar from '../../components/Navbar/Navbar'
 import '../register/register.css'
 import './login.css'
 import axios from 'axios'
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
   const navigate = useNavigate();
@@ -45,7 +45,7 @@ function Login() {
           setemail(e.target.value)
           console.log(email)
         }
-        } placeholder='rima@gmail.com'/>
+        } placeholder='rima@gmail.com' />
         <p>
           password :
         </p>
@@ -55,13 +55,13 @@ function Login() {
         }
         } />
         <div className='btnContainer'>
-          <p> <sapn><a href="#jdjjd"> forgot password</a></sapn></p>
+          <p> <sapn> forgot password</sapn></p>
         </div>
         <div className='btnContainer'>
           <button className='yellowBtn' onClick={handleRegisterSubmit}>Login</button>
         </div>
         <div className='btnContainer'>
-          <p>Don't you have accoount ?<sapn><a href="#jdjjd"> register</a></sapn></p>
+          <p>Don't you have accoount ?<sapn><Link to='/register'> register</Link></sapn></p>
         </div>
       </div>
     </div>
