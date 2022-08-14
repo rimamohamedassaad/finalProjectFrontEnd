@@ -1,0 +1,8 @@
+.mahdarimages img{
+    width:250px;
+    height: 240px;
+}
+.mahdarimages div{
+    display: flex;
+    flex-wrap: wrap;
+}

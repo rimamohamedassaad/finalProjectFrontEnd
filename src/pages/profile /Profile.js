@@ -3,6 +3,7 @@ import Navbar from '../../components/Navbar/Navbar'
 import ReportCard from '../../components/reports/ReportCard'
 import './profile.css'
 import { useNavigate } from "react-router-dom";
+import Loader from '../../components/Loader/Loader';
 
 function Profile() {
     const navigate = useNavigate();

@@ -41,6 +41,13 @@ span {
   padding: 40px;
   
 }
+.aquwaCardkbir{
+  background: rgba(185, 209, 234);
+  border-radius: 52px;
+  width: 70%;
+  margin: auto;
+  padding: 40px;
+}
 .aquwaCard h1 {
   text-align: center;
 }
