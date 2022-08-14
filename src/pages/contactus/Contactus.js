@@ -10,7 +10,7 @@ function Contactus() {
                 <div className='contactInfo'>
                     <div className='aquwaCardContact'>
                         <h1>
-                            Contactus
+                            Contact us
                         </h1>
                         <p>
                             email :
@@ -23,7 +23,7 @@ function Contactus() {
 
                         </textarea>
                         <div className='btnContainer btnadd'>
-                            <button className='yellowBtn'>register</button>
+                            <button className='yellowBtn'>Submit</button>
                         </div>
                         {/* <img src={atle} alt="atle" /> */}
 

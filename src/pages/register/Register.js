@@ -28,6 +28,9 @@ function Register() {
         if (res.status === 200) {
           localStorage.setItem("token", res.data.token);
           localStorage.setItem("id", res.data.user.id);
+          setemail("");
+          setComfirmPass("")
+          setPassword("")
           navigate("/profile");
           window.location.reload("");
         }
@@ -77,12 +80,24 @@ function Register() {
           <input className='input' type='password' value={comfirmPass} placeholder='enter your password' onChange={(e) =>
             setComfirmPass(e.target.value)
           } />
+          <p>
+            address :
+          </p>
+          <input className='input' type='text' value={comfirmPass} placeholder='enter your address' onChange={(e) =>
+            setComfirmPass(e.target.value)
+          } />
+            <p>
+            phone number :
+          </p>
+          <input className='input' type='text' value={comfirmPass} placeholder='enter your phone number' onChange={(e) =>
+            setComfirmPass(e.target.value)
+          } />
           {error && <p className='error'>{error}</p>}
           <div className='btnContainer btnaddr'>
             <button className='yellowBtn' onClick={handleRegisterSubmit}>register</button>
           </div>
           <div className='btnContainer '>
-            <p>already have account <sapn><Link to='/login'>Login</Link></sapn></p>
+            <p>already have account <sapn><Link to='/login'><sapn className='register'>Login</sapn></Link></sapn></p>
           </div>
         </form>
       </div>

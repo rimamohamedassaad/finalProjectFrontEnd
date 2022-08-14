@@ -56,13 +56,13 @@ function Login() {
         }
         } />
         <div className='btnContainer'>
-          <p> <sapn> forgot password</sapn></p>
+          <p> <sapn className='register'> forgot password</sapn></p>
         </div>
         <div className='btnContainer'>
           <button className='yellowBtn' onClick={handleRegisterSubmit}>Login</button>
         </div>
         <div className='btnContainer'>
-          <p>Don't you have accoount ?<sapn><Link to='/register'> register</Link></sapn></p>
+          <p>Don't you have accoount ?<Link to='/register'> <sapn className='register'>register</sapn></Link></p>
         </div>
       </div>
       <Footer />

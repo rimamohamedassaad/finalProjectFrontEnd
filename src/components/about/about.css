@@ -1,7 +1,7 @@
 .aboutContainer1 {
   display: flex;
   flex-wrap: wrap;
-  height: 100vh;
+  /* height: 100vh; */
   width: 90%;
   margin: auto;
 }
@@ -22,6 +22,7 @@
 }
 .aboutImage {
   width: 50%;
+  height: 400px;
 }
 .about img {
   width: 40rem;

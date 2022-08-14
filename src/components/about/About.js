@@ -7,7 +7,10 @@ function About() {
             <div className='aboutInfo'>
                 <p className='abouth1'>mahdar.org</p>
                 <p className='aboutSlagon'>make your life safe</p>
-                <p>Lorem Ipsum is simply dummy text of the printing and typ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's k</p>
+                <p>
+                Mahdar  is a website that helps you to report the theft of your phone if you get robbed, or if you want to buy a second-hand phone and you want to know if it was stolen or not. 
+
+                    </p>
                 <p><button className='yellowBtn'>About us</button></p>
             </div>
             <div className='aboutImage about'>

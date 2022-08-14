@@ -9,12 +9,12 @@
   width: 50%;
   margin: auto;
   padding: 40px;
-  margin-bottom: 150px;
+  /* margin-bottom: 150px; */
   position: relative;
   
 }
 .contactInfo{
-     padding-bottom: 150px;
+     padding-bottom: 70px;
 }
 .buleCircleC{
   width: 100px;
