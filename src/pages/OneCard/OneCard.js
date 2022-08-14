@@ -5,6 +5,7 @@ import { Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import Loader from '../../components/Loader/Loader';
 import './onecard.css'
+import Footer from '../../components/footer/Footer';
 function OneCard(props) {
     const [data, setData] = useState([])
     const [image, SetImage] = useState([])
@@ -80,6 +81,7 @@ function OneCard(props) {
                     </div>
                 </div>
             )}
+            <Footer/>
         </div>
     )
 }

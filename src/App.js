@@ -11,6 +11,7 @@ import ProtectedRoutes from './components/ProtectedRoutes';
 import Search from './pages/search/Search';
 import Profile from './pages/profile /Profile';
 import OneCard from './pages/OneCard/OneCard';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (

@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../../components/footer/Footer'
 import Navbar from '../../components/Navbar/Navbar'
 import stolen from '../../images/stolen.png'
 function Aboutus() {
@@ -16,6 +17,7 @@ function Aboutus() {
           <img src={stolen} alt="about" />
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

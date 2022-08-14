@@ -4,6 +4,9 @@ import './register.css'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
+import Footer from '../../components/footer/Footer'
+// import { confirmAlert } from 'react-confirm-alert'; // Import
+
 function Register() {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
@@ -28,13 +31,11 @@ function Register() {
           navigate("/profile");
           window.location.reload("");
         }
-        else if (res.status === 400) {
-          setError(res.data.msg)
-        }
       }
       )
       .catch((err) => {
         console.log("error", err);
+      
       });
   }
   return (
@@ -85,6 +86,7 @@ function Register() {
           </div>
         </form>
       </div>
+      <Footer/>
     </div>
   )
 }

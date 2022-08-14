@@ -4,6 +4,7 @@ import '../register/register.css'
 import './login.css'
 import axios from 'axios'
 import { Link, useNavigate } from "react-router-dom";
+import Footer from '../../components/footer/Footer'
 
 function Login() {
   const navigate = useNavigate();
@@ -64,6 +65,7 @@ function Login() {
           <p>Don't you have accoount ?<sapn><Link to='/register'> register</Link></sapn></p>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

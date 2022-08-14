@@ -6,14 +6,12 @@ import ReportCardKbir from './ReportCardKbir'
 function Reports() {
     const [data, setData] = useState([])
     useEffect(() => {
-        axios.get(`http://127.0.0.1:5000/api/report`, { crossdomain: true }).then(response => {
+        axios.get(`http://127.0.0.1:5000/api/report/latest`, { crossdomain: true }).then(response => {
             setData(response.data.response);
             console.log(response)
             //   setLoader(false);
         });
     }, [])
-
-
     return (
         <div className='reportssectionContainer'>
             <p className='abouth1 servicesH1 reporth1'> recent <span> Reports</span></p>
@@ -26,7 +24,7 @@ function Reports() {
                 />
                 </Link>)
             })}
-            <div className='servicesBtnContainer'><button className='yellowBtn'>Services</button></div>
+            <div className='servicesBtnContainer'><button className='yellowBtn'>more reports</button></div>
             <div className='circle'></div>
         </div>
     )

@@ -4,7 +4,10 @@ import running from '../../images/theif.png'
 import plus from '../../images/icons8-add-new-50.png'
 import Navbar from '../../components/Navbar/Navbar'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
+import Footer from '../../components/footer/Footer'
 export default function AddReport() {
+    const navigate = useNavigate();
     const [colors, setColors] = useState([]);
     const [categories, setCategories] = useState([]);
     const [brands, setBrands] = useState([])
@@ -20,7 +23,7 @@ export default function AddReport() {
     const [securitycode, setsecuritycode] = useState("")
     const [reportDate, setreportDate] = useState("")
     const [images, setImages] = useState([]);
-
+    const id = localStorage.getItem('id');
     const HandelAddReport = async (e) => {
         e.preventDefault();
         const image_array = Object.values(images.images);
@@ -39,7 +42,8 @@ export default function AddReport() {
         formData.append("securitycode", securitycode);
         formData.append("serialnumber", serialnumber);
         formData.append("reportDate", reportDate);
-        console.log("form data",formData);
+        formData.append("user", id);
+        console.log("form data", formData);
         await axios
             .post("http://127.0.0.1:5000/api/report", formData, {
                 headers: {
@@ -48,7 +52,19 @@ export default function AddReport() {
             })
             .then((res) => {
                 setImages("");
+                setBrand("");
+                setCategory("");
+                setColor("");
+                setdescription("");
+                setsecuritycode("");
+                setlinetype("");
+                setstolenphonenumber("");
+                setownerphonenumber("");
+                setreportDate("");
+                setownerName("");
+                setserialnumber("");
                 console.log(res.data);
+                navigate("/search");
             })
             .catch((err) => {
                 console.log(err);
@@ -81,42 +97,47 @@ export default function AddReport() {
                             <p>
                                 client name :
                             </p>
-                            <input className='input' placeholder='owner phone name' onChange={(e) => { setownerName(e.target.value);
-                            console.log(ownerName) }} value={ownerName} />
+                            <input className='input' placeholder='owner phone name' onChange={(e) => {
+                                setownerName(e.target.value);
+                                console.log(ownerName)
+                            }} required value={ownerName} />
                         </div>
                         <div className='oneinline1'>  <p>
                             Report date :
                         </p>
-                            <input className='input' placeholder='report date' type='text' onChange={(e) => {setreportDate(e.target.value);
-                            console.log(reportDate)}
-                            } name='date' value={reportDate} />
+                            <input className='input' placeholder='report date' type='date' onChange={(e) => {
+                                setreportDate(e.target.value);
+                                console.log(reportDate)
+                            }
+                            } name='date' required value={reportDate} />
                         </div>
                     </div>
                     <div className='line1'>
                         <div className='oneinline1'>
                             <p>
-                                category :
+                                brand :
                             </p>
-                            <select className='select' onChange={(e) => {setCategory(e.target.value)
-                            console.log(category)}}>
-                                <option selected disabled >
-                                    set category
+                            <select className='select' required onChange={(e) => setBrand(e.target.value)}>
+                                <option selected disabled>
+                                    set brand
                                 </option>
-                                {categories.map((data, index) => {
+                                {brands.map((data, index) => {
 
                                     return (
                                         <option key={index} value={data.id}>{data.name}
                                         </option>
                                     )
                                 })}
-
                             </select>
                         </div>
+
                         <div className='oneinline1'>  <p>
                             color :
                         </p>
-                            <select className='select' onChange={(e) => {setColor(e.target.value)
-                            console.log(color)}}>
+                            <select className='select' required onChange={(e) => {
+                                setColor(e.target.value)
+                                console.log(color)
+                            }}>
                                 <option selected disabled>
                                     set color
                                 </option>
@@ -134,13 +155,16 @@ export default function AddReport() {
                     <div className='line1'>
                         <div className='oneinline1'>
                             <p>
-                                brand :
+                                category :
                             </p>
-                            <select className='select' onChange={(e) => setBrand(e.target.value)}>
-                                <option selected disabled>
-                                    set brand
+                            <select className='select' required onChange={(e) => {
+                                setCategory(e.target.value)
+                                console.log(category)
+                            }}>
+                                <option selected disabled >
+                                    set category
                                 </option>
-                                {brands.map((data, index) => {
+                                {categories.map((data, index) => {
 
                                     return (
                                         <option key={index} value={data.id}>{data.name}
@@ -152,7 +176,7 @@ export default function AddReport() {
                         <div className='oneinline1'>  <p>
                             line Type :
                         </p>
-                            <select className='select' onChange={(e) => setlinetype(e.target.value)}>
+                            <select className='select' required onChange={(e) => setlinetype(e.target.value)}>
                                 <option disabled selected>
                                     set line type
                                 </option>
@@ -170,12 +194,12 @@ export default function AddReport() {
                             <p>
                                 security code :
                             </p>
-                            <input className='input' placeholder='stolen phone lockscreen password' onChange={(e) => setsecuritycode(e.target.value)} value={securitycode} />
+                            <input className='input' required placeholder='stolen phone lockscreen password' onChange={(e) => setsecuritycode(e.target.value)} value={securitycode} />
                         </div>
                         <div className='oneinline1'>  <p>
                             serial number :
                         </p>
-                            <input className='input' placeholder='stolen phone serial number' onChange={(e) => setserialnumber(e.target.value)} value={serialnumber} />
+                            <input className='input' required placeholder='stolen phone serial number' onChange={(e) => setserialnumber(e.target.value)} value={serialnumber} />
                         </div>
                     </div>
                     <div className='line1'>
@@ -183,17 +207,17 @@ export default function AddReport() {
                             <p>
                                 owner phone number :
                             </p>
-                            <input className='input' placeholder='client current phone number' onChange={(e) => setownerphonenumber(e.target.value)} value={ownerphonenumber} />
+                            <input className='input' required placeholder='client current phone number' onChange={(e) => setownerphonenumber(e.target.value)} value={ownerphonenumber} />
                         </div>
                         <div className='oneinline1'>  <p>
                             stolen phone number :
                         </p>
-                            <input className='input'  placeholder='stolen phone number' onChange={(e) => setstolenphonenumber(e.target.value)} value={stolenphonenumber} />
+                            <input className='input' required placeholder='stolen phone number' onChange={(e) => setstolenphonenumber(e.target.value)} value={stolenphonenumber} />
                         </div>
                     </div>
                     <div>
                         <p>description</p>
-                        <textarea className='textarea' rows='4'placeholder='this phone has a feature that makes it spetial' onChange={(e) => setdescription(e.target.value)} value={description}>
+                        <textarea className='textarea' required rows='4' placeholder='this phone has a feature that makes it spetial' onChange={(e) => setdescription(e.target.value)} value={description}>
 
                         </textarea>
                     </div>
@@ -202,18 +226,20 @@ export default function AddReport() {
                             <p>
                                 mahdar images :
                             </p>
-                            <input className='input' type="file" hidden id="addmahdar" onChange={(e) => setImages({ images: e.target.files })} />
+                            <input className='input' type="file" required hidden id="addmahdar" onChange={(e) => setImages({ images: e.target.files })} />
                             <img src={plus} alt="add_image" className='plus' />
                             <label for='addmahdar'> <p className='input addmahdar'></p> </label>
                         </div>
                     </div>
                     <div className='btnContainer btnContainerAdd' >
-                        <button className='yellowBtn' onClick={HandelAddReport}>register</button>
+                        <button type='submit' className='yellowBtn' onClick={HandelAddReport}>register</button>
                     </div>
                     <div className='yellowCircle'></div>
                     <img className='theifImage' src={running} alt="running" />
                 </div>
             </div>
+            <Footer />
+
         </div>
     )
 }

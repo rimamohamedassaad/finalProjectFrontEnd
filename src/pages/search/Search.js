@@ -6,8 +6,12 @@ import axios from 'axios'
 import '../../App.css'
 import ReportCardKbir from '../../components/reports/ReportCardKbir'
 import Loader from '../../components/Loader/Loader'
+import { Link } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
+import Footer from '../../components/footer/Footer'
 function Search() {
     const [colors, setColors] = useState([]);
+    const navigate = useNavigate();
     const [categories, setCategories] = useState([]);
     const [brands, setBrands] = useState([])
     const [color, setColor] = useState("")
@@ -15,23 +19,7 @@ function Search() {
     const [brand, setBrand] = useState("")
     const [data, setData] = useState([])
     let [loader, setLoader] = useState(true);
-    const filterByColor = async () => {
-        await axios.get(`http://127.0.0.1:5000/api/report/color/${color}`).then(response => {
-            setData(response.data.response);
-        })
-    }
-    const filterByBrand = async () => {
-        await axios.get(`http://127.0.0.1:5000/api/report/brand/${brand}`).then(response => {
-            setData(response.data.response);
-        })
-    }
-    const filterByCategory = async () => {
-        axios.get(`http://127.0.0.1:5000/api/report/category/${category}`, { crossdomain: true }).then(response => {
-            setData(response.data.response);
-            console.log(response)
-            //   setLoader(false);
-        });
-    }
+
     useEffect(() => {
         axios.get(`http://127.0.0.1:5000/api/report`, { crossdomain: true }).then(response => {
             setData(response.data.response);
@@ -54,14 +42,14 @@ function Search() {
     }, [])
     return (
         <div className='searchContainerP'>
-            {loader && <Loader/>}
+            {loader && <Loader />}
             {!loader && (
                 <div>
                     <Navbar />
                     <div className='filteringContainer'>
                         <select className='dropDownList' onChange={(e) => {
-                            setBrand(e.target.value)
-                            filterByBrand()
+                            setData(data.filter((item) => item.brand === e.target.value))
+                            console.log(data.filter((item) => item.brand === e.target.value))
                         }}>
                             <option selected disabled>
                                 set brand
@@ -75,8 +63,8 @@ function Search() {
                             })}
                         </select>
                         <select className='dropDownList' onChange={(e) => {
-                            setCategory(e.target.value)
-                            filterByCategory();
+                            setData(data.filter((item) => item.category === e.target.value))
+
                             console.log(category)
                         }}>
                             <option selected disabled >
@@ -91,9 +79,7 @@ function Search() {
                             })}
                         </select>
                         <select className='dropDownList' onChange={(e) => {
-                            setColor(e.target.value)
-                            filterByColor()
-                            console.log(color)
+                            setData(data.filter((item) => item.color === e.target.value))
                         }}>
                             <option selected disabled>
                                 set color
@@ -124,16 +110,17 @@ function Search() {
                     </div>
                     <div className='searchcardContainer'>
                         {data.map((data, index) => {
-                            return (<ReportCardKbir category={data.category} brand={data.brand} reportDate={data.reportDate}
-                                color={data.color} line={data.linetype} code={data.securitycode} serialnumber={data.serialnumber}
-                                description={data.description}
-                            />)
+                            return (
+                                <Link to='oncard' state={{ id: data._id }} key={index}><ReportCardKbir category={data.category} brand={data.brand} reportDate={data.reportDate}
+                                    color={data.color} line={data.linetype} code={data.securitycode} serialnumber={data.serialnumber}
+                                    description={data.description}
+                                /></Link>)
                         })}
 
                     </div>
                 </div>
             )}
-
+            <Footer />
         </div>
     )
 }

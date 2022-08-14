@@ -4,6 +4,7 @@ import About from '../../components/about/About'
 import Services from '../../components/services/Services'
 import Reports from '../../components/reports/Reports'
 import './home.css'
+import Footer from '../../components/footer/Footer';
 function Home() {
     return (
         <div className='home'>
@@ -11,6 +12,9 @@ function Home() {
             <About />
             <Services />
             <Reports />
+            <div className='footerContainer'>
+                <Footer />
+            </div>
         </div>
     )
 }

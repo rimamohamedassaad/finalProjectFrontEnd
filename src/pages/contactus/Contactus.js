@@ -1,6 +1,7 @@
 import React from 'react'
 import './contact.css'
 import Navbar from '../../components/Navbar/Navbar'
+import Footer from '../../components/footer/Footer'
 function Contactus() {
     return (
         <div>
@@ -36,6 +37,7 @@ function Contactus() {
                     <div className='yellowCircleC'></div> */}
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }

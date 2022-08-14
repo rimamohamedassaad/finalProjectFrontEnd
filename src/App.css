@@ -10,6 +10,18 @@ body {
   background-size: cover;
   /* height: 100vh; */
 }
+.footerContainer{
+  position: absolute;
+  bottom: 0;
+  background-color: transparent;
+  width: 100%;
+
+}
+a{
+  color:#00235e ;
+  text-decoration: none;
+  cursor: pointer;
+}
 .blueBtn {
   background-color: #618abb;
   color: #fff;
@@ -17,6 +29,7 @@ body {
   padding: 10px 30px;
   font-size: 18px;
   border-radius: 35px;
+  cursor: pointer;
 }
 .yellowBtn {
   background-color: #fdba21;
@@ -25,6 +38,7 @@ body {
   padding: 10px 30px;
   font-size: 18px;
   border-radius: 35px;
+  cursor: pointer;
 }
 span {
   color: #fdba21;
@@ -32,6 +46,7 @@ span {
 .App {
   margin-top: 0;
   padding-top: 0;
+  /* position: relative; */
 }
 .aquwaCard {
   background: rgba(185, 209, 234);
