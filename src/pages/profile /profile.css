@@ -11,3 +11,8 @@
     border: none;
     color: #00235e;
 }
+.logoutContainer{
+display: flex;
+justify-content: center;
+margin-top: 20px;
+}

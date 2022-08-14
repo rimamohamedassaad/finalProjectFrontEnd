@@ -29,8 +29,8 @@
 }
 .theifImage {
   position: absolute;
-  bottom: 78px;
-  right: 62px;
+  bottom: 15px;
+  right: 32px;
 }
 .yellowCircle {
   background: #00235e;
@@ -38,8 +38,8 @@
   height: 66px;
   border-radius: 60%;
   position: absolute;
-  bottom: 95px;
-  right: 72px;
+  bottom: 15px;
+  right: 42px;
 }
 @media screen and (max-width: 1024px) {
   .yellowCircle {

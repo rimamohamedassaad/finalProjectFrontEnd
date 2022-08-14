@@ -42,8 +42,8 @@ function Profile() {
                     </p>
                     <input className='inputProfile' type="text" placeholder='enter you user name'
                         required /></div>
-                <div>
-                    <button className='blueBtn' onClick={logout}>logout</button>
+                <div className='logoutContainer'>
+                    <button className='yellowBtn' onClick={logout}>logout</button>
                 </div>
             </div>
             <div>

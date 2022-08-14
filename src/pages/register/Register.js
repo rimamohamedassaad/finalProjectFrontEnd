@@ -28,9 +28,13 @@ function Register() {
           navigate("/profile");
           window.location.reload("");
         }
-      })
+        else if (res.status === 400) {
+          setError(res.data.msg)
+        }
+      }
+      )
       .catch((err) => {
-        console.log(err);
+        console.log("error", err);
       });
   }
   return (
@@ -73,10 +77,10 @@ function Register() {
             setComfirmPass(e.target.value)
           } />
           {error && <p className='error'>{error}</p>}
-          <div className='btnContainer'>
+          <div className='btnContainer btnaddr'>
             <button className='yellowBtn' onClick={handleRegisterSubmit}>register</button>
           </div>
-          <div className='btnContainer'>
+          <div className='btnContainer '>
             <p>already have account <sapn><Link to='/login'>Login</Link></sapn></p>
           </div>
         </form>

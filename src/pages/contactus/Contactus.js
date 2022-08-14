@@ -21,7 +21,7 @@ function Contactus() {
                         <textarea className='textarea' rows="7">
 
                         </textarea>
-                        <div className='btnContainer'>
+                        <div className='btnContainer btnadd'>
                             <button className='yellowBtn'>register</button>
                         </div>
                         {/* <img src={atle} alt="atle" /> */}

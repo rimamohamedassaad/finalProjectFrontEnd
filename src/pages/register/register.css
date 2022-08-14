@@ -7,6 +7,9 @@
     height: 100vh;
     padding-bottom: 150px;
  }
+ .btnaddr{
+   margin-top: 30px;
+ }
  .login{
     background-image: url("../../images//loginimage2.png");
  }
